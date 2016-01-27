@@ -32,7 +32,7 @@
     // @params : $base
     function dbSelectClient($base)
     {
-        $data = $base->prepare('SELECT * FROM Clients');
+        $data = $base->prepare('SELECT DISTINCT * FROM Clients');
         $data->execute();
         return $data;
     }

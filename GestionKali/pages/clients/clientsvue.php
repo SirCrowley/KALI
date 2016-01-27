@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    include_once '../../includes/database.php';
+    include_once '../../includes/affichage.php';
+    $base = dbConnect();
+    $data = dbSelectClient($base);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -125,6 +132,7 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
+                        <th>Numero</th>
                         <th>Nom</th>
                         <th>Prenom</th>
                         <th>Societe</th>
@@ -138,57 +146,13 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>Auvergne</td>
-                        <td>Robert</td>
-                        <td>Digitalix</td>
-                        <td>4 rue albert</td>
-                        <td>06000</td>
-                        <td>Nice</td>
-                        <td>A.R@gmail.com</td>
-                        <td>0406090852</td>
-                        <td>0623151478</td>
-                        <td>Mange beaucoup de poulet</td>
-                      </tr>
-                      <tr>
-                        <td>Auvergne</td>
-                        <td>Robert</td>
-                        <td>Digitalix</td>
-                        <td>4 rue albert</td>
-                        <td>06000</td>
-                        <td>Nice</td>
-                        <td>A.R@gmail.com</td>
-                        <td>0406090852</td>
-                        <td>0623151478</td>
-                        <td>Mange beaucoup de poulet</td>
-                      </tr>
-                      <tr>
-                        <td>Auvergne</td>
-                        <td>Robert</td>
-                        <td>Digitalix</td>
-                        <td>4 rue albert</td>
-                        <td>06000</td>
-                        <td>Nice</td>
-                        <td>A.R@gmail.com</td>
-                        <td>0406090852</td>
-                        <td>0623151478</td>
-                        <td>Mange beaucoup de poulet</td>
-                      </tr>
-                      <tr>
-                        <td>Auvergne</td>
-                        <td>Robert</td>
-                        <td>Digitalix</td>
-                        <td>4 rue albert</td>
-                        <td>06000</td>
-                        <td>Nice</td>
-                        <td>A.R@gmail.com</td>
-                        <td>0406090852</td>
-                        <td>0623151478</td>
-                        <td>Mange beaucoup de poulet</td>
-                      </tr>
+                        <?php
+                           afficheTab($data);
+                        ?>
                     </tbody>
                     <tfoot>
                       <tr>
+                        <th>Numero</th>
                         <th>Nom</th>
                         <th>Prenom</th>
                         <th>Societe</th>
