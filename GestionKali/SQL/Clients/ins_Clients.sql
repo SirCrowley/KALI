@@ -1,0 +1,3 @@
+INSERT INTO Clients
+VALUES (0,'Robert','Le camionneur','Camion Express','3, rue de la bosquette',06820,'Nice','mail@contact.moi',0458987562,0689547215,'Des grosses notes comme on les aime, a lancienne comme la moutarde'),
+       (1,'Yvette','Dubreuil','ENT 56','24, avenue BHL',20520,'Loin','denizo@contact.moi',0458987562,0657896215,'Des grosses notes comme on les aime, a lancienne comme la moutarde');
