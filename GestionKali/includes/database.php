@@ -75,16 +75,16 @@
         $data = $base->prepare('INSERT INTO Clients VALUES(:nom, :prenom, '
                 . ':societe, :adresse, :cp, :ville, :email, :fixe, :portable, '
                 . ':notes)');
-        $data->bindValue(':nom', $arrayDatas[], PDO::PARAM_STR);
-        $data->bindValue(':prenom', $arrayDatas[], PDO::PARAM_STR);
-        $data->bindValue(':societe', $arrayDatas[], PDO::PARAM_STR);
-        $data->bindValue(':adresse', $arrayDatas[], PDO::PARAM_STR);
-        $data->bindValue(':cp', $arrayDatas[], PDO::PARAM_);
-        $data->bindValue(':ville', $arrayDatas[], PDO::PARAM_STR);
-        $data->bindValue(':email', $arrayDatas[], PDO::PARAM_STR);
-        $data->bindValue(':fixe', $arrayDatas[], PDO::PARAM_);
-        $data->bindValue(':portable', $arrayDatas[], PDO::PARAM_);
-        $data->bindValue(':notes', $arrayDatas[], PDO::PARAM_STR);
+        $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
+        $data->bindValue(':prenom', $arrayDatas['prenom'], PDO::PARAM_STR);
+        $data->bindValue(':societe', $arrayDatas['societe'], PDO::PARAM_STR);
+        $data->bindValue(':adresse', $arrayDatas['adresse'], PDO::PARAM_STR);
+        $data->bindValue(':cp', $arrayDatas['cp'], PDO::PARAM_INT);
+        $data->bindValue(':ville', $arrayDatas['ville'], PDO::PARAM_STR);
+        $data->bindValue(':email', $arrayDatas['email'], PDO::PARAM_STR);
+        $data->bindValue(':fixe', $arrayDatas['fixe'], PDO::PARAM_INT);
+        $data->bindValue(':portable', $arrayDatas['portable'], PDO::PARAM_INT);
+        $data->bindValue(':notes', $arrayDatas['notes'], PDO::PARAM_STR);
         $data->execute();
     }
 ?>

@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include_once '../../includes/database.php';
+    $base = dbConnect();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -126,43 +131,43 @@
                   <div class="box-body">
                     <div class="form-group">
                       <label for="InputNom1">Nom</label>
-                      <input type="text" class="form-control" id="InputNom1" placeholder="Nom">
+                      <input type="text" class="form-control" id="InputNom1" name="nom" placeholder="Nom">
                     </div>
                     <div class="form-group">
                       <label for="InputPrenom1">Prenom</label>
-                      <input type="text" class="form-control" id="InputPrenom1" placeholder="Prenom">
+                      <input type="text" class="form-control" id="InputPrenom1" name="prenom" placeholder="Prenom">
                     </div>
                     <div class="form-group">
                       <label for="InputSociete1">Societe</label>
-                      <input type="text" class="form-control" id="InputSociete1" placeholder="Societe">
+                      <input type="text" class="form-control" id="InputSociete1" name="societe" placeholder="Societe">
                     </div>
                     <div class="form-group">
                       <label for="InputAdresse1">Adresse</label>
-                      <input type="text" class="form-control" id="InputAdresse1" placeholder="Adresse">
+                      <input type="text" class="form-control" id="InputAdresse1" name="adresse"placeholder="Adresse">
                     </div>
                     <div class="form-group">
                       <label for="InputCP1">Code Postal</label>
-                      <input type="text" class="form-control" id="InputCP1" placeholder="Code Postal">
+                      <input type="text" class="form-control" id="InputCP1" name="cp" placeholder="Code Postal">
                     </div>
                     <div class="form-group">
                       <label for="InputVille1">Ville</label>
-                      <input type="text" class="form-control" id="InputVille1" placeholder="Ville">
+                      <input type="text" class="form-control" id="InputVille1" name="ville" placeholder="Ville">
                     </div>
                     <div class="form-group">
                       <label for="InputEmail1">Email</label>
-                      <input type="email" class="form-control" id="InputEmail1" placeholder="Email">
+                      <input type="email" class="form-control" id="InputEmail1" name="email" placeholder="Email">
                     </div>
                     <div class="form-group">
                       <label for="InputFixe1">Fixe</label>
-                      <input type="tel" class="form-control" id="InputFixe1" placeholder="Fixe">
+                      <input type="tel" class="form-control" id="InputFixe1" name="fixe" placeholder="Fixe">
                     </div>
                     <div class="form-group">
                       <label for="InputPortable1">Portable</label>
-                      <input type="tel" class="form-control" id="InputPortable1" placeholder="Portable">
+                      <input type="tel" class="form-control" id="InputPortable1" name="portable" placeholder="Portable">
                     </div>
                     <div class="form-group">
                       <label for="InputNotes1">Notes</label>
-                      <textarea class="form-control" id="InputNotes1" placeholder="Notes" cols="20" rows="5"></textarea>
+                      <textarea class="form-control" id="InputNotes1" name="notes" placeholder="Notes" cols="20" rows="5"></textarea>
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
