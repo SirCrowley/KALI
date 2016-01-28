@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
+    <!-- YELLOW SKIN :) -->
+    <link rel="stylesheet" href="../dist/css/skins/skin-yellow.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,7 +50,7 @@
             <div class="col-xs-8">
             </div><!-- /.col -->
             <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat">Connexion</button>
+              <button type="submit" class="btn btn-warning btn-primary btn-block btn-flat">Connexion</button>
             </div><!-- /.col -->
           </div>
         </form>
