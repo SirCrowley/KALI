@@ -69,7 +69,7 @@
     
     // Fonction de requete INSERT Pour les clients
     // @return : n/a
-    // @params : $arrayDatas
+    // @params : $arrayDatas, $base
     function dbInsertClient($arrayDatas, $base)
     {
         $data = $base->prepare('INSERT INTO Clients(clients_nom, clients_prenom, '
@@ -88,6 +88,34 @@
         $data->bindValue(':fixe', $arrayDatas['fixe'], PDO::PARAM_STR);
         $data->bindValue(':portable', $arrayDatas['portable'], PDO::PARAM_STR);
         $data->bindValue(':notes', $arrayDatas['notes'], PDO::PARAM_STR);
+        $data->execute();
+    }
+    
+    // Fonction de requete INSERT Pour les produits
+    // @return : n/a
+    // @params : $arrayDatas, $base
+    function dbInsertProduit($arrayDatas, $base)
+    {
+        $data = $base->prepare('INSERT INTO Produits(produits_reference, '
+                . 'produits_nom, produits_prix) '
+                . 'VALUES(:reference, :nom, :prix)');
+        $data->bindValue(':reference', $arrayDatas['reference'], PDO::PARAM_STR);
+        $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
+        $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_NUMBER_INT);
+        $data->execute();
+    }
+    
+    // Fonction de requete INSERT Pour les marques
+    // @return : n/a
+    // @params : $arrayDatas, $base
+    function dbInsertMarque($arrayDatas, $base)
+    {
+        $data = $base->prepare('INSERT INTO Marques(produits_reference, '
+                . 'produits_nom, produits_prix) '
+                . 'VALUES(:reference, :nom, :prix)');
+        $data->bindValue(':reference', $arrayDatas['reference'], PDO::PARAM_STR);
+        $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
+        $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_NUMBER_INT);
         $data->execute();
     }
 ?>
