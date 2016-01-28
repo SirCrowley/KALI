@@ -33,7 +33,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-yellow sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
@@ -50,7 +50,9 @@
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Deploiement menu</span>
           </a>
-          <a href="./deco.php">Deconnexion</a>
+          <a href="./deco.php" class="btn-warning" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Deconnexion</span>
+          </a>
 	</nav>
       </header>
       <!-- Left side column. contains the logo and sidebar -->
@@ -86,7 +88,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="./pages/marques/marquesvue.php"><i class="fa fa-eye"></i> Voir</a></li>
-                <li><a href="./pages/marques/marquesadd.php><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+                <li><a href="./pages/marques/marquesadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
 		<li><a href="./pages/marques/marquessup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
               </ul>
             </li>
@@ -129,7 +131,7 @@
                   <h3 class="box-title">Ajouter un client</h3>
                 </div><!-- /.box-header -->
                 <a href="./pages/clients/clientsadd.php">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Ajouter</button>
+                    <button type="submit" class="btn-warning btn btn-primary btn-block btn-flat">Ajouter</button>
                 </a>
               </div><!-- /.box -->
             </div><!--/.col (right) -->

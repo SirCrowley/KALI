@@ -5,12 +5,12 @@
     {
         // Declaration des variables
         $user = 'root';
-        $passwd = '123456';
+        $passwd = 'root';
         $host = 'localhost';
         $bdd = 'KaliGestion';
         
         // Connexion
-        $base = new PDO('mysql:host=localhost;dbname=KaliGestion', 'root', '123456');
+        $base = new PDO('mysql:host=localhost;dbname=KaliGestion', 'root', 'root');
         $base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
         // Renvoi de la base
