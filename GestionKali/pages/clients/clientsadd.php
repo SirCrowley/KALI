@@ -1,7 +1,5 @@
 <?php
     session_start();
-    include_once '../../includes/database.php';
-    $base = dbConnect();
 ?>
 <!DOCTYPE html>
 <html>
@@ -127,7 +125,7 @@
                   <h3 class="box-title">Ajout</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" method="post" action="../../includes/ajoutClient.php">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="InputNom1">Nom</label>
@@ -159,15 +157,15 @@
                     </div>
                     <div class="form-group">
                       <label for="InputFixe1">Fixe</label>
-                      <input type="tel" class="form-control" id="InputFixe1" name="fixe" placeholder="Fixe">
+                      <input type="text" class="form-control" id="InputFixe1" name="fixe" placeholder="Fixe">
                     </div>
                     <div class="form-group">
                       <label for="InputPortable1">Portable</label>
-                      <input type="tel" class="form-control" id="InputPortable1" name="portable" placeholder="Portable">
+                      <input type="text" class="form-control" id="InputPortable1" name="portable" placeholder="Portable">
                     </div>
                     <div class="form-group">
                       <label for="InputNotes1">Notes</label>
-                      <textarea class="form-control" id="InputNotes1" name="notes" placeholder="Notes" cols="20" rows="5"></textarea>
+                      <input type="text" class="form-control" id="InputNotes1" name="notes" placeholder="Notes" cols="20" rows="5"></textarea>
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">

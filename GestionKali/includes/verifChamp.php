@@ -8,52 +8,52 @@
         if(isset($arrayPost['nom']))
             $arrayVerif['nom'] = filter_var($arrayPost['nom'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['nom'] = "-";
+            $arrayVerif['nom'] = "NA";
         
         if(isset($arrayPost['prenom']))
             $arrayVerif['prenom'] = filter_var($arrayPost['prenom'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['prenom'] = "-";
+            $arrayVerif['prenom'] = "NA";
         
         if(isset($arrayPost['societe']))
             $arrayVerif['societe'] = filter_var($arrayPost['societe'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['societe'] = "-";
+            $arrayVerif['societe'] = "NA";
         
         if(isset($arrayPost['adresse']))
             $arrayVerif['adresse'] = filter_var($arrayPost['adresse'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['adresse'] = "-";
+            $arrayVerif['adresse'] = "NA";
         
         if(isset($arrayPost['cp']))
-            $arrayVerif['cp'] = filter_var($arrayPost['cp'], FILTER_SANITIZE_NUMBER_INT);
+            $arrayVerif['cp'] = filter_var($arrayPost['cp'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['cp'] = 0;
+            $arrayVerif['cp'] = "NA";
         
         if(isset($arrayPost['ville']))
             $arrayVerif['ville'] = filter_var($arrayPost['ville'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['ville'] = "-";
+            $arrayVerif['ville'] = "NA";
         
         if(isset($arrayPost['email']))
             $arrayVerif['email'] = filter_var($arrayPost['email'], FILTER_SANITIZE_EMAIL);
         else
-            $arrayVerif['mail'] = "-";
+            $arrayVerif['mail'] = "NA";
         
         if(isset($arrayPost['fixe']))
-            $arrayVerif['fixe'] = filter_var($arrayPost['fixe'], FILTER_SANITIZE_NUMBER_INT);
+            $arrayVerif['fixe'] = filter_var($arrayPost['fixe'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['fixe'] = 33400000000;
+            $arrayVerif['fixe'] = "NA";
         
         if(isset($arrayPost['portable']))
-            $arrayVerif['portable'] = filter_var($arrayPost['portable'], FILTER_SANITIZE_NUMBER_INT);
+            $arrayVerif['portable'] = filter_var($arrayPost['portable'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['portable'] = 33600000000;
+            $arrayVerif['portable'] = "NA";
         
         if(isset($arrayPost['notes']))
-            $arrayVerif['notes'] = filter_var($arrayPost['notes'], FILTER_SANITIZE_NUMBER_INT);
+            $arrayVerif['notes'] = filter_var($arrayPost['notes'], FILTER_SANITIZE_STRING);
         else
-            $arrayVerif['notes'] = "-";
+            $arrayVerif['notes'] = "NA";
         
         return $arrayVerif;
     }

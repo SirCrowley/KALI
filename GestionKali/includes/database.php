@@ -70,20 +70,23 @@
     // Fonction de requete INSERT Pour les clients
     // @return : n/a
     // @params : $arrayDatas
-    function dbInsertClient($arrayDatas)
+    function dbInsertClient($arrayDatas, $base)
     {
-        $data = $base->prepare('INSERT INTO Clients VALUES(:nom, :prenom, '
+        $data = $base->prepare('INSERT INTO Clients(clients_nom, clients_prenom, '
+                . 'clients_societe, clients_adresse, clients_cp, clients_ville, '
+                . 'clients_email, clients_fixe, clients_portable, clients_notes) '
+                . 'VALUES(:nom, :prenom, '
                 . ':societe, :adresse, :cp, :ville, :email, :fixe, :portable, '
                 . ':notes)');
         $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
         $data->bindValue(':prenom', $arrayDatas['prenom'], PDO::PARAM_STR);
         $data->bindValue(':societe', $arrayDatas['societe'], PDO::PARAM_STR);
         $data->bindValue(':adresse', $arrayDatas['adresse'], PDO::PARAM_STR);
-        $data->bindValue(':cp', $arrayDatas['cp'], PDO::PARAM_INT);
+        $data->bindValue(':cp', $arrayDatas['cp'], PDO::PARAM_STR);
         $data->bindValue(':ville', $arrayDatas['ville'], PDO::PARAM_STR);
         $data->bindValue(':email', $arrayDatas['email'], PDO::PARAM_STR);
-        $data->bindValue(':fixe', $arrayDatas['fixe'], PDO::PARAM_INT);
-        $data->bindValue(':portable', $arrayDatas['portable'], PDO::PARAM_INT);
+        $data->bindValue(':fixe', $arrayDatas['fixe'], PDO::PARAM_STR);
+        $data->bindValue(':portable', $arrayDatas['portable'], PDO::PARAM_STR);
         $data->bindValue(':notes', $arrayDatas['notes'], PDO::PARAM_STR);
         $data->execute();
     }
