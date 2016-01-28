@@ -110,12 +110,9 @@
     // @params : $arrayDatas, $base
     function dbInsertMarque($arrayDatas, $base)
     {
-        $data = $base->prepare('INSERT INTO Marques(produits_reference, '
-                . 'produits_nom, produits_prix) '
-                . 'VALUES(:reference, :nom, :prix)');
-        $data->bindValue(':reference', $arrayDatas['reference'], PDO::PARAM_STR);
+        $data = $base->prepare('INSERT INTO Marques(marques_nom)'
+                . 'VALUES(:nom)');
         $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
-        $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_INT);
         $data->execute();
     }
 ?>

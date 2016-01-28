@@ -81,4 +81,31 @@
         
         return $arrayVerif;
     }
+    
+    // Fonction de verification des champs rentres dans le form Marque
+    // @return : $arrayVerif
+    // @params : $arrayPost
+    function verifMarque($arrayPost)
+    {
+        $arrayVerif = array();
+        
+        if(isset($arrayPost['nom']))
+            $arrayVerif['nom'] = filter_var($arrayPost['nom'], FILTER_SANITIZE_STRING);
+        else
+            $arrayVerif['nom'] = "NA";
+        
+        return $arrayVerif;
+    }
+    
+    // Fonction de verification des champs rentres dans le form Rendez vous
+    // @return : $arrayVerif
+    // @params : $arrayPost
+    function verifRdv($arrayPost)
+    {
+        $arrayVerif = array();
+        
+        // TODO
+        
+        return $arrayVerif;
+    }
 ?>

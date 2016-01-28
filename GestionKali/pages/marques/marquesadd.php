@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -122,11 +125,11 @@
                   <h3 class="box-title">Ajout</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" method="post" action="../../includes/ajout/ajoutMarque.php">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="InputNom3">Nom</label>
-                      <input type="text" class="form-control" id="InputNom3" placeholder="Nom">
+                      <input type="text" class="form-control" id="InputNom3" name="nom" placeholder="Nom">
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
