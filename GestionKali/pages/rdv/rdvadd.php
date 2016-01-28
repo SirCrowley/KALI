@@ -25,7 +25,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-yellow sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
@@ -117,7 +117,7 @@
             <!-- left column -->
             <div class="col-md-9">
               <!-- general form elements -->
-              <div class="box box-primary">
+              <div class="box box-warning">
                 <div class="box-header with-border">
                   <h3 class="box-title">Ajout</h3>
                 </div><!-- /.box-header -->
@@ -146,7 +146,7 @@
             <!-- right column -->
             <div class="col-md-3">
               <!-- Horizontal Form -->
-              <div class="box box-info">
+              <div class="box box-warning">
                 <div class="box-header with-border">
                   <h3 class="box-title">Horizontal Form</h3>
                 </div><!-- /.box-header -->

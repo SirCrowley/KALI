@@ -34,7 +34,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-yellow sidebar-mini">
     <div class="wrapper">
 
       <header class="main-header">
@@ -125,7 +125,7 @@
           <div class="row">
             <div class="col-xs-12">
 
-              <div class="box">
+              <div class="box box-warning">
                 <div class="box-header">
                   <h3 class="box-title">Liste des marques</h3>
                 </div><!-- /.box-header -->
