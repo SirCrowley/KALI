@@ -141,7 +141,7 @@
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    <button type="submit" class="btn-warning btn btn-primary">Enregistrer</button>
                   </div>
                 </form>
               </div><!-- /.box -->
