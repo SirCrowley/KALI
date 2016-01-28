@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -122,19 +125,19 @@
                   <h3 class="box-title">Ajout</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" method="post" action="../../includes/ajout/ajoutProduit.php">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="InputReference1">Reference</label>
-                      <input type="text" class="form-control" id="InputReference1" placeholder="Reference">
+                      <input type="text" class="form-control" id="InputReference1" name="reference" placeholder="Reference">
                     </div>
                     <div class="form-group">
                       <label for="InputNom2">Nom</label>
-                      <input type="text" class="form-control" id="InputNom2" placeholder="Nom">
+                      <input type="text" class="form-control" id="InputNom2" name="nom" placeholder="Nom">
                     </div>
                     <div class="form-group">
                       <label for="InputPrix1">Prix</label>
-                      <input type="number" class="form-control" id="InputPrix1" placeholder="Prix">
+                      <input type="number" class="form-control" id="InputPrix1" name="prix" placeholder="Prix">
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">

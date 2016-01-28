@@ -101,7 +101,7 @@
                 . 'VALUES(:reference, :nom, :prix)');
         $data->bindValue(':reference', $arrayDatas['reference'], PDO::PARAM_STR);
         $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
-        $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_NUMBER_INT);
+        $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_INT);
         $data->execute();
     }
     
@@ -115,7 +115,7 @@
                 . 'VALUES(:reference, :nom, :prix)');
         $data->bindValue(':reference', $arrayDatas['reference'], PDO::PARAM_STR);
         $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
-        $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_NUMBER_INT);
+        $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_INT);
         $data->execute();
     }
 ?>

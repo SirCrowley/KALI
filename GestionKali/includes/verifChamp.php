@@ -57,4 +57,28 @@
         
         return $arrayVerif;
     }
+    
+    // Fonction de verification des champs rentres dans le form Produit
+    // @return : $arrayVerif
+    // @params : $arrayPost
+    function verifProduit($arrayPost)
+    {
+        $arrayVerif = array();
+        if(isset($arrayPost['reference']))
+            $arrayVerif['reference'] = filter_var($arrayPost['reference'], FILTER_SANITIZE_STRING);
+        else
+            $arrayVerif['reference'] = "NA";
+        
+        if(isset($arrayPost['nom']))
+            $arrayVerif['nom'] = filter_var($arrayPost['nom'], FILTER_SANITIZE_STRING);
+        else
+            $arrayVerif['nom'] = "NA";
+        
+        if(isset($arrayPost['prix']))
+            $arrayVerif['prix'] = filter_var($arrayPost['prix'], FILTER_SANITIZE_NUMBER_INT);
+        else
+            $arrayVerif['prix'] = -1;
+        
+        return $arrayVerif;
+    }
 ?>

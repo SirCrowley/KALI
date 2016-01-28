@@ -125,7 +125,7 @@
                   <h3 class="box-title">Ajout</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="../../includes/ajoutClient.php">
+                <form role="form" method="post" action="../../includes/ajout/ajoutClient.php">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="InputNom1">Nom</label>
