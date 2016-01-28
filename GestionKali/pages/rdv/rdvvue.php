@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    include_once '../../includes/database.php';
+    include_once '../../includes/affichage.php';
+    $base = dbConnect();
+    $data = dbSelectRDV($base);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -126,14 +133,20 @@
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
+                        <th>Numero</th>
                         <th>Date</th>
                         <th>Lieu</th>
                         <th>Client</th>
                       </tr>
                     </thead>
-                        <!--Script-->
+                    <tbody>
+                        <?php
+                           afficheTab($data); 
+                        ?>
+                    </tbody>
                     <tfoot>
                       <tr>
+                        <th>Numero</th>
                         <th>Date</th>
                         <th>Lieu</th>
                         <th>Client</th>

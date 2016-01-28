@@ -50,7 +50,7 @@
     // Fonction de requete SELECT Pour les marques
     // @return : $data
     // @params : $base
-    function dbSelectMarques($base)
+    function dbSelectMarque($base)
     {
         $data = $base->prepare('SELECT * FROM Marques');
         $data->execute();
@@ -65,5 +65,26 @@
         $data = $base->prepare('SELECT * FROM Rdvs');
         $data->execute();
         return $data;
+    }
+    
+    // Fonction de requete INSERT Pour les clients
+    // @return : n/a
+    // @params : $arrayDatas
+    function dbInsertClient($arrayDatas)
+    {
+        $data = $base->prepare('INSERT INTO Clients VALUES(:nom, :prenom, '
+                . ':societe, :adresse, :cp, :ville, :email, :fixe, :portable, '
+                . ':notes)');
+        $data->bindValue(':nom', $arrayDatas[], PDO::PARAM_STR);
+        $data->bindValue(':prenom', $arrayDatas[], PDO::PARAM_STR);
+        $data->bindValue(':societe', $arrayDatas[], PDO::PARAM_STR);
+        $data->bindValue(':adresse', $arrayDatas[], PDO::PARAM_STR);
+        $data->bindValue(':cp', $arrayDatas[], PDO::PARAM_);
+        $data->bindValue(':ville', $arrayDatas[], PDO::PARAM_STR);
+        $data->bindValue(':email', $arrayDatas[], PDO::PARAM_STR);
+        $data->bindValue(':fixe', $arrayDatas[], PDO::PARAM_);
+        $data->bindValue(':portable', $arrayDatas[], PDO::PARAM_);
+        $data->bindValue(':notes', $arrayDatas[], PDO::PARAM_STR);
+        $data->execute();
     }
 ?>
