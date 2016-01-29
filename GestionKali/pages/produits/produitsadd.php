@@ -1,5 +1,9 @@
 <?php
     session_start();
+    include_once '../../includes/database.php';
+    include_once '../../includes/affichage.php';
+    $base = dbConnect();
+    $data = dbSelectMarqueMenu($base);
 ?>
 <!DOCTYPE html>
 <html>
@@ -127,6 +131,14 @@
                 <!-- form start -->
                 <form role="form" method="post" action="../../includes/ajout/ajoutProduit.php">
                   <div class="box-body">
+                    <div class="form-group">
+                      <label for="InputMarque1">Marque</label>
+                      <select class="form-control" id="InputMarque1" name="marque" placeholder="Prix">
+                          <?php
+                            afficheMenu($data, "marques_id");
+                          ?>
+                      </select>
+                    </div>
                     <div class="form-group">
                       <label for="InputReference1">Reference</label>
                       <input type="text" class="form-control" id="InputReference1" name="reference" placeholder="Reference">

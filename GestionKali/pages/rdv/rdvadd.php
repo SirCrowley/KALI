@@ -143,7 +143,7 @@
                       <label for="InputClient1">Client</label>
                       <select class="form-control" name="client" id="InputClient1" placeholder="Client">
                           <?php
-                            afficheMenu($data);
+                            afficheMenu($data, "clients_id");
                           ?>
                       </select>
                     </div>

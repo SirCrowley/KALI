@@ -53,7 +53,10 @@
     // @params : $base
     function dbSelectProduit($base)
     {
-        $data = $base->prepare('SELECT * FROM Produits');
+        $data = $base->prepare('SELECT P.produits_id, P.produits_reference, '
+                . 'P.produits_nom, P.produits_prix, M.marques_nom '
+                . 'FROM Produits AS P LEFT JOIN Marques AS M '
+                . 'ON P.produits_marque = M.marques_id');
         $data->execute();
         return $data;
     }
@@ -68,12 +71,24 @@
         return $data;
     }
     
+    // Fonction de requete SELECT Pour les marques dans le menu d'ajout
+    // @return : $data
+    // @params : $base
+    function dbSelectMarqueMenu($base)
+    {
+        $data = $base->prepare('SELECT marques_id, marques_nom FROM Marques');
+        $data->execute();
+        return $data;
+    }
+    
     // Fonction de requete SELECT Pour les rdv
     // @return : $data
     // @params : $base
     function dbSelectRDV($base)
     {
-        $data = $base->prepare('SELECT R.rdvs_id, R.rdvs_date, R.rdvs_lieu, C.clients_nom, C.clients_prenom, C.clients_societe FROM Rdvs as R LEFT JOIN Clients as C ON R.rdvs_client = C.clients_id');
+        $data = $base->prepare('SELECT R.rdvs_id, R.rdvs_date, R.rdvs_lieu, '
+                . 'C.clients_nom, C.clients_prenom, C.clients_societe FROM Rdvs '
+                . 'as R LEFT JOIN Clients as C ON R.rdvs_client = C.clients_id');
         $data->execute();
         return $data;
     }
@@ -108,11 +123,12 @@
     function dbInsertProduit($arrayDatas, $base)
     {
         $data = $base->prepare('INSERT INTO Produits(produits_reference, '
-                . 'produits_nom, produits_prix) '
-                . 'VALUES(:reference, :nom, :prix)');
+                . 'produits_nom, produits_prix, produits_marque) '
+                . 'VALUES(:reference, :nom, :prix, :marque)');
         $data->bindValue(':reference', $arrayDatas['reference'], PDO::PARAM_STR);
         $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
         $data->bindValue(':prix', $arrayDatas['prix'], PDO::PARAM_INT);
+        $data->bindValue(':marque', $arrayDatas['marque'], PDO::PARAM_INT);
         $data->execute();
     }
     
