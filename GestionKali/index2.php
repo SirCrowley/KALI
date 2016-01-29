@@ -164,11 +164,7 @@
         <div class="pull-right hidden-xs">
           <b>Gestion kali</b> Version 1.0.0
         </div>
-<<<<<<< HEAD
         <strong>Copyright &copy; 2016 <a href="http://www.atelierdescontenus.net/">L'atelier des contenus</a>.</strong> Tous droits reserves.
-=======
-        <strong>Copyright &copy; 2016 <a href="http://kalidesign.fr">KaliDesign</a>.</strong> All rights reserved.<a href="http://almsaeedstudio.com">Almsaeed Studio</a>
->>>>>>> b2c9adeb901163a62765538ffd9faedf379612a3
       </footer>
     </div><!-- ./wrapper -->
 
