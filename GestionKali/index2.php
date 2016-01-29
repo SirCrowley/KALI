@@ -43,23 +43,24 @@
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>Kali</b>Design</span>
         </a>
-	     <nav class="navbar navbar-static-top" role="navigation">
+        <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Deploiement menu</span>
           </a>
           <div class="navbar-custom-menu">
-            <a href="./deco.php" class="sidebar-toggle" role="button">
-            </a>
-            <!--  <span class="sr-only">Deconnexion</span> -->
-            <ul class="nav navbar-nav navbar-right">
-              <a href="./deco.php" margin-left="20px">
+            <ul class="nav navbar-nav">
+              <li>
+              <a href="./deco.php" class="dropdown">
                 <i class="fa fa-power-off"></i>
               </a>
+             </li>
             </ul>
           </div>
-	     </nav>
-    </header>
+        </nav>
+      </header>
+    </div>
+    <div>
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
@@ -163,7 +164,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2014-2015 <a href="http://kalidesign.fr">KaliDesign</a>.</strong> All rights reserved.<a href="http://almsaeedstudio.com">Almsaeed Studio</a>
       </footer>
     </div><!-- ./wrapper -->
 
