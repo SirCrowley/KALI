@@ -132,7 +132,7 @@
         <section class="content">
             <div class="col-md-4">
               <!-- Ajouter un client -->
-              <div class="box box-info">
+              <div class="box box-warning">
                 <div class="box-header with-border">
                   <h3 class="box-title">Ajouter un client</h3>
                 </div><!-- /.box-header -->
@@ -143,7 +143,7 @@
             </div><!--/.col (right) -->
             <div class="col-md-4">
               <!-- RDV semaine -->
-              <div class="box box-danger">
+              <div class="box box-warning">
                 <div class="box-header with-border">
                   <h3 class="box-title">Rendez vous de la semaine</h3>
                 </div><!-- /.box-header -->
@@ -151,7 +151,7 @@
             </div><!--/.col (right) -->
             <div class="col-md-4">
               <!-- RDV tel semaine -->
-              <div class="box box-danger">
+              <div class="box box-warning">
                 <div class="box-header with-border">
                   <h3 class="box-title">Rendez vous telephonique de la semaine</h3>
                 </div><!-- /.box-header -->
@@ -164,7 +164,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://kalidesign.fr">KaliDesign</a>.</strong> All rights reserved.<a href="http://almsaeedstudio.com">Almsaeed Studio</a>
+        <strong>Copyright &copy; 2016 <a href="http://kalidesign.fr">KaliDesign</a>.</strong> All rights reserved.<a href="http://almsaeedstudio.com">Almsaeed Studio</a>
       </footer>
     </div><!-- ./wrapper -->
 
