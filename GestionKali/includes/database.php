@@ -32,7 +32,18 @@
     // @params : $base
     function dbSelectClient($base)
     {
-        $data = $base->prepare('SELECT DISTINCT * FROM Clients');
+        $data = $base->prepare('SELECT * FROM Clients');
+        $data->execute();
+        return $data;
+    }
+    
+    // Fonction de requete SELECT Pour les clients dans les menus d'addition
+    // @return : $data
+    // @params : $base
+    function dbSelectClientMenu($base)
+    {
+        $data = $base->prepare('SELECT clients_id, clients_nom, clients_prenom, clients_societe'
+                . ' FROM Clients');
         $data->execute();
         return $data;
     }
@@ -62,7 +73,7 @@
     // @params : $base
     function dbSelectRDV($base)
     {
-        $data = $base->prepare('SELECT * FROM Rdvs');
+        $data = $base->prepare('SELECT R.rdvs_id, R.rdvs_date, R.rdvs_lieu, C.clients_nom, C.clients_prenom, C.clients_societe FROM Rdvs as R LEFT JOIN Clients as C ON R.rdvs_client = C.clients_id');
         $data->execute();
         return $data;
     }
@@ -115,4 +126,19 @@
         $data->bindValue(':nom', $arrayDatas['nom'], PDO::PARAM_STR);
         $data->execute();
     }
+    
+    // Fonction de requete INSERT Pour les marques
+    // @return : n/a
+    // @params : $arrayDatas, $base
+    function dbInsertRdv($arrayDatas, $base)
+    {
+        $data = $base->prepare('INSERT INTO Rdvs(rdvs_date, rdvs_lieu, rdvs_client)'
+                . 'VALUES(:date, :lieu, :client)');
+        $data->bindValue(':date', $arrayDatas['date'], PDO::PARAM_INT);
+        $data->bindValue(':lieu', $arrayDatas['lieu'], PDO::PARAM_STR);
+        $data->bindValue(':client', $arrayDatas['client'], PDO::PARAM_INT);
+        $data->execute();
+    }
+    
+    
 ?>

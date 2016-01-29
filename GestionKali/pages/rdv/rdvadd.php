@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    include_once '../../includes/database.php';
+    include_once '../../includes/affichage.php';
+    $base = dbConnect();
+    $data = dbSelectClientMenu($base);
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -122,19 +129,23 @@
                   <h3 class="box-title">Ajout</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form">
+                <form role="form" method="POST" action="../../includes/ajout/ajoutRdv.php">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="InputDate1">Date</label>
-                      <input type="date" class="form-control" id="InputDate1">
+                      <input type="date" class="form-control" name="date" id="InputDate1">
                     </div>
                     <div class="form-group">
                       <label for="InputLieu1">Lieu</label>
-                      <input type="text" class="form-control" id="InputLieu1" placeholder="Lieu">
+                      <input type="text" class="form-control" name="lieu" id="InputLieu1" placeholder="Lieu">
                     </div>
                     <div class="form-group">
                       <label for="InputClient1">Client</label>
-                      <input type="text" class="form-control" id="InputClient1" placeholder="Client">
+                      <select class="form-control" name="client" id="InputClient1" placeholder="Client">
+                          <?php
+                            afficheMenu($data);
+                          ?>
+                      </select>
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">

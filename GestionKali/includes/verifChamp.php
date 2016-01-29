@@ -104,7 +104,20 @@
     {
         $arrayVerif = array();
         
-        // TODO
+        if(isset($arrayPost['date']))
+            $arrayVerif['date'] = strtotime($arrayPost['date']);
+        else
+            $arrayVerif['date'] = "NA";
+        
+        if(isset($arrayPost['lieu']))
+            $arrayVerif['lieu'] = filter_var($arrayPost['lieu'], FILTER_SANITIZE_STRING);
+        else
+            $arrayVerif['lieu'] = "NA";
+        
+        if(isset($arrayPost['client']))
+            $arrayVerif['client'] = filter_var($arrayPost['client'], FILTER_SANITIZE_STRING);
+        else
+            $arrayVerif['client'] = "NA";
         
         return $arrayVerif;
     }
