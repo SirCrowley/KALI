@@ -1,5 +1,9 @@
 <?php
     session_start();
+    include_once '../../includes/database.php';
+    include_once '../../includes/affichage.php';
+    $base = dbConnect();
+    $data = dbSelectAchat($base);
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,6 +19,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -61,17 +67,17 @@
               <ul class="treeview-menu">
                 <li><a href="../clients/clientsvue.php"><i class="fa fa-eye"></i> Voir</a></li>
                 <li><a href="../clients/clientsadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
-		<li><a href="../clients/clientssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+		<li><a href=".../clients/clientssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
               </ul>
             </li>
-            <li class="treeview">
+            <li class="active treeview">
               <a href="#">
                   <i class="fa fa-usd"></i> <span>Achats</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="../achats/achatsvue.php"><i class="fa fa-eye"></i> Voir</a></li>
-                <li><a href="../achats/achatsadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
-		<li><a href="../achats/achatssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+                <li class="active"><a href="./achatsvue.php"><i class="fa fa-eye"></i> Voir</a></li>
+                <li><a href="./achatsadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+		<li><a href="./achatssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -84,13 +90,13 @@
 		<li><a href="../produits/produitssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
               </ul>
             </li>
-            <li class="active treeview">
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-trademark"></i> <span>Marques</span> <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
                 <li><a href="../marques/marquesvue.php"><i class="fa fa-eye"></i> Voir</a></li>
-                <li class="active"><a href="../marques/marquesadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+                <li><a href="../marques/marquesadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
 		<li><a href="../marques/marquessup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
               </ul>
             </li>
@@ -119,45 +125,61 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Marques
-            <small>Ajouter</small>
+            Clients
+            <small>vue</small>
           </h1>
         </section>
 
         <!-- Main content -->
         <section class="content">
           <div class="row">
-            <!-- left column -->
-            <div class="col-md-9">
-              <!-- general form elements -->
+            <div class="col-xs-12">
               <div class="box box-warning">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Ajout</h3>
+                <div class="box-header">
+                  <h3 class="box-title">Liste des Clients</h3>
                 </div><!-- /.box-header -->
-                <!-- form start -->
-                <form role="form" method="post" action="../../includes/ajout/ajoutMarque.php">
-                  <div class="box-body">
-                    <div class="form-group">
-                      <label for="InputNom3">Nom</label>
-                      <input type="text" class="form-control" id="InputNom3" name="nom" placeholder="Nom">
-                    </div>
-                  </div><!-- /.box-body -->
-                  <div class="box-footer">
-                    <button type="submit" class="btn-warning btn btn-primary">Enregistrer</button>
-                  </div>
-                </form>
+                <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Numero</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Societe</th>
+                        <th>Adresse</th>
+                        <th>CP</th>
+                        <th>Ville</th>
+                        <th>Email</th>
+                        <th>Fixe</th>
+                        <th>Portable</th>
+                        <th>Notes</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                           afficheTab($data);
+                        ?>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <th>Numero</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Societe</th>
+                        <th>Adresse</th>
+                        <th>CP</th>
+                        <th>Ville</th>
+                        <th>Email</th>
+                        <th>Fixe</th>
+                        <th>Portable</th>
+                        <th>Notes</th>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div><!-- /.box-body -->
               </div><!-- /.box -->
-            </div><!--/.col (left) -->
-            <!-- right column -->
-            <div class="col-md-3">
-              <!-- Horizontal Form -->
-              <div class="box box-warning">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Horizontal Form</h3>
-                </div><!-- /.box-header -->
-              </div><!-- /.box -->
-            </div><!--/.col (right) -->
-          </div>   <!-- /.row -->
+            </div><!-- /.col -->
+          </div><!-- /.row -->
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
       <footer class="main-footer">
@@ -177,11 +199,30 @@
     <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
     <!-- Bootstrap 3.3.5 -->
     <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <!-- DataTables -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
     <script src="../../plugins/fastclick/fastclick.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../../dist/js/app.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="../../dist/js/demo.js"></script>
+    <!-- page script -->
+    <script>
+      $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+          "paging": true,
+          "lengthChange": false,
+          "searching": false,
+          "ordering": true,
+          "info": true,
+          "autoWidth": false
+        });
+      });
+    </script>
   </body>
 </html>
