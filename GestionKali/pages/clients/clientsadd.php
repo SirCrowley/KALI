@@ -29,10 +29,8 @@
     <![endif]-->
   </head>
   <body class="hold-transition skin-yellow sidebar-mini">
-    <div class="wrapper">
-
+    <div class="wrapper">!
       <header class="main-header">
-
         <!-- Logo -->
         <a href="../../index2.php" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -47,6 +45,7 @@
           </a>
 	</nav>
       </header>
+<<<<<<< HEAD
       <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
@@ -113,6 +112,8 @@
         </section>
         <!-- /.sidebar -->
       </aside>
+=======
+>>>>>>> 280c6a44b9b6328468a1d47f06e494ee1dd1dd5e
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
