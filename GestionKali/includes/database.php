@@ -54,7 +54,7 @@
     function dbSelectProduit($base)
     {
         $data = $base->prepare('SELECT P.produits_id, P.produits_reference, '
-                . 'P.produits_nom, M.marques_nom '
+                . 'P.produits_nom,P.produits_prix, M.marques_nom '
                 . 'FROM Produits AS P LEFT JOIN Marques AS M '
                 . 'ON P.produits_marque = M.marques_id');
         $data->execute();
