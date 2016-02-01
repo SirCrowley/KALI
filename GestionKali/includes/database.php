@@ -78,6 +78,16 @@
         return $data;
     }
     
+    // Fonction de requete SELECT Pour les achats
+    // @return : $data
+    // @params : $base
+    function dbSelectAchat($base)
+    {
+        $data = $base->prepare('SELECT * FROM Achats'); //TODO
+        $data->execute();
+        return $data;
+    }
+    
     // Fonction de requete INSERT Pour les clients
     // @return : n/a
     // @params : $arrayDatas, $base

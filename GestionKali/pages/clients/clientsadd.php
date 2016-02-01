@@ -45,6 +45,72 @@
           </a>
 	</nav>
       </header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MENU</li>
+            <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-group"></i> <span>Clients</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="./clientsvue.php"><i class="fa fa-eye"></i> Voir</a></li>
+                <li class="active"><a href="./clientsadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+		<li><a href="./clientssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                  <i class="fa fa-usd"></i> <span>Achats</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../achats/achatsvue.php"><i class="fa fa-eye"></i> Voir</a></li>
+                <li><a href="../achats/achatsadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+		<li><a href="../achats/achatssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-copyright"></i> <span>Produits</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../produits/produitsvue.php"><i class="fa fa-eye"></i> Voir</a></li>
+                <li><a href="../produits/produitsadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+		<li><a href="../produits/produitssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-trademark"></i> <span>Marques</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../marques/marquesvue.php"><i class="fa fa-eye"></i> Voir</a></li>
+                <li><a href="../marques/marquesadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+		<li><a href="../marques/marquessup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-calendar"></i> <span>Rendez Vous</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../rdv/rdvvue.php"><i class="fa fa-eye"></i> Voir</a></li>
+                <li><a href="../rdv/rdvadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+		<li><a href="../rdv/rdvsup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+              </ul>
+            </li>
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-signal"></i> <span>Statistiques</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
 
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">

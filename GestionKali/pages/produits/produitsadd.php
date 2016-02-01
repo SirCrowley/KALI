@@ -64,6 +64,16 @@
 		<li><a href="../clients/clientssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
               </ul>
             </li>
+            <li class="treeview">
+              <a href="#">
+                  <i class="fa fa-usd"></i> <span>Achats</span> <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="../achats/achatsvue.php"><i class="fa fa-eye"></i> Voir</a></li>
+                <li><a href="../achats/achatsadd.php"><i class="fa fa-plus-square-o"></i> Ajouter</a></li>
+		<li><a href="../achats/achatssup.php"><i class="fa fa-minus-square-o"></i> Supprimer</a></li>
+              </ul>
+            </li>
             <li class="active treeview">
               <a href="#">
                 <i class="fa fa-copyright"></i> <span>Produits</span> <i class="fa fa-angle-left pull-right"></i>
