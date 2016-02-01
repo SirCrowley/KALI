@@ -1,5 +1,10 @@
 <?php
     session_start();
+    include_once '../../includes/database.php';
+    include_once '../../includes/affichage.php';
+    $base = dbConnect();
+    $dataClient = dbSelectClientMenu($base);
+    $dataProduit = dbSelectProduitMenu($base);
 ?>
 <!DOCTYPE html>
 <html>
@@ -135,47 +140,31 @@
                   <h3 class="box-title">Ajout</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" method="post" action="../../includes/ajout/ajoutClient.php">
+                <form role="form" method="post" action="../../includes/ajout/ajoutAchat.php">
                   <div class="box-body">
                     <div class="form-group">
-                      <label for="InputNom1">Nom</label>
-                      <input type="text" class="form-control" id="InputNom1" name="nom" placeholder="Nom">
+                      <label for="InputClient1">Client</label>
+                      <select class="form-control" id="InputClient1" name="client">
+                          <?php
+                          afficheMenu($dataClient, 'clients_id');
+                          ?>
+                      </select>
                     </div>
                     <div class="form-group">
-                      <label for="InputPrenom1">Prenom</label>
-                      <input type="text" class="form-control" id="InputPrenom1" name="prenom" placeholder="Prenom">
+                      <label for="InputProduit1">Produit</label>
+                      <select class="form-control" id="InputProduit1" name="produit">
+                          <?php
+                          afficheMenu($dataProduit, 'produits_id');
+                          ?>
+                      </select>
                     </div>
                     <div class="form-group">
-                      <label for="InputSociete1">Societe</label>
-                      <input type="text" class="form-control" id="InputSociete1" name="societe" placeholder="Societe">
+                      <label for="InputDate1">Date achat</label>
+                      <input type="date" class="form-control" id="InputDate1" name="date">
                     </div>
                     <div class="form-group">
-                      <label for="InputAdresse1">Adresse</label>
-                      <input type="text" class="form-control" id="InputAdresse1" name="adresse"placeholder="Adresse">
-                    </div>
-                    <div class="form-group">
-                      <label for="InputCP1">Code Postal</label>
-                      <input type="text" class="form-control" id="InputCP1" name="cp" placeholder="Code Postal">
-                    </div>
-                    <div class="form-group">
-                      <label for="InputVille1">Ville</label>
-                      <input type="text" class="form-control" id="InputVille1" name="ville" placeholder="Ville">
-                    </div>
-                    <div class="form-group">
-                      <label for="InputEmail1">Email</label>
-                      <input type="email" class="form-control" id="InputEmail1" name="email" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="InputFixe1">Fixe</label>
-                      <input type="text" class="form-control" id="InputFixe1" name="fixe" placeholder="Fixe">
-                    </div>
-                    <div class="form-group">
-                      <label for="InputPortable1">Portable</label>
-                      <input type="text" class="form-control" id="InputPortable1" name="portable" placeholder="Portable">
-                    </div>
-                    <div class="form-group">
-                      <label for="InputNotes1">Notes</label>
-                      <input type="text" class="form-control" id="InputNotes1" name="notes" placeholder="Notes" cols="20" rows="5"></textarea>
+                      <label for="InputQuantite1">Quantite</label>
+                      <input type="text" class="form-control" id="InputQuantite1" name="quantite">
                     </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">

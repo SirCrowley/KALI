@@ -127,4 +127,34 @@
         
         return $arrayVerif;
     }
+    
+    // Fonction de verification des champs rentres dans le form Rendez vous
+    // @return : $arrayVerif
+    // @params : $arrayPost
+    function verifAchat($arrayPost)
+    {
+        $arrayVerif = array();
+        
+        if(isset($arrayPost['client']))
+            $arrayVerif['client'] = filter_var($arrayPost['client'], FILTER_SANITIZE_NUMBER_INT);
+        else
+            $arrayVerif['client'] = 0;
+        
+        if(isset($arrayPost['produit']))
+            $arrayVerif['produit'] = filter_var($arrayPost['produit'], FILTER_SANITIZE_NUMBER_INT);
+        else
+            $arrayVerif['produit'] = 0;
+        
+        if(isset($arrayPost['date']))
+            $arrayVerif['date'] = strtotime($arrayPost['date']);
+        else
+            $arrayVerif['date'] = "NA";
+        
+        if(isset($arrayPost['quantite']))
+            $arrayVerif['quantite'] = filter_var($arrayPost['quantite'], FILTER_SANITIZE_NUMBER_INT);
+        else
+            $arrayVerif['quantite'] = 0;
+        
+        return $arrayVerif;
+    }
 ?>

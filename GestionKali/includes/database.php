@@ -54,7 +54,20 @@
     function dbSelectProduit($base)
     {
         $data = $base->prepare('SELECT P.produits_id, P.produits_reference, '
-                . 'P.produits_nom, P.produits_prix, M.marques_nom '
+                . 'P.produits_nom, M.marques_nom '
+                . 'FROM Produits AS P LEFT JOIN Marques AS M '
+                . 'ON P.produits_marque = M.marques_id');
+        $data->execute();
+        return $data;
+    }
+    
+    // Fonction de requete SELECT Pour les produits Dans les menus d'addition
+    // @return : $data
+    // @params : $base
+    function dbSelectProduitMenu($base)
+    {
+        $data = $base->prepare('SELECT P.produits_id, P.produits_reference, '
+                . 'P.produits_nom, M.marques_nom '
                 . 'FROM Produits AS P LEFT JOIN Marques AS M '
                 . 'ON P.produits_marque = M.marques_id');
         $data->execute();
@@ -98,7 +111,13 @@
     // @params : $base
     function dbSelectAchat($base)
     {
-        $data = $base->prepare('SELECT * FROM Achats'); //TODO
+        $data = $base->prepare('SELECT A.achats_id, C.clients_nom, '
+                . 'C.clients_prenom, C.clients_societe, M.marques_nom, P.produits_nom, '
+                . 'P.produits_reference, A.achats_date, A.achats_quantite '
+                . 'FROM Achats AS A, Produits AS P, Clients AS C, Marques AS M '
+                . 'WHERE A.achats_produit = P.produits_id '
+                . 'AND A.achats_client = C.clients_id '
+                . 'AND P.produits_marque = M.marques_id');
         $data->execute();
         return $data;
     }
@@ -166,5 +185,18 @@
         $data->execute();
     }
     
-    
+     // Fonction de requete INSERT Pour les achats
+    // @return : n/a
+    // @params : $arrayDatas, $base
+    function dbInsertAchat($arrayDatas, $base)
+    {
+        $data = $base->prepare('INSERT INTO Achats(achats_client, achats_produit, '
+                . 'achats_date, achats_quantite)'
+                . 'VALUES(:client, :produit, :date, :quantite)');
+        $data->bindValue(':client', $arrayDatas['client'], PDO::PARAM_INT);
+        $data->bindValue(':produit', $arrayDatas['produit'], PDO::PARAM_INT);
+        $data->bindValue(':date', $arrayDatas['date'], PDO::PARAM_INT);
+        $data->bindValue(':quantite', $arrayDatas['quantite'], PDO::PARAM_INT);
+        $data->execute();
+    } 
 ?>

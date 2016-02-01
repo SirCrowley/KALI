@@ -125,7 +125,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Clients
+            Achats
             <small>vue</small>
           </h1>
         </section>
@@ -136,23 +136,21 @@
             <div class="col-xs-12">
               <div class="box box-warning">
                 <div class="box-header">
-                  <h3 class="box-title">Liste des Clients</h3>
+                  <h3 class="box-title">Liste des Achats</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th>Numero</th>
-                        <th>Nom</th>
-                        <th>Prenom</th>
-                        <th>Societe</th>
-                        <th>Adresse</th>
-                        <th>CP</th>
-                        <th>Ville</th>
-                        <th>Email</th>
-                        <th>Fixe</th>
-                        <th>Portable</th>
-                        <th>Notes</th>
+                        <th>Client(Nom)</th>
+                        <th>Client(Prenom)</th>
+                        <th>Client(Societe)</th>
+                        <th>Produit(Marque)</th>
+                        <th>Produit(Nom)</th>
+                        <th>Produit(Ref)</th>
+                        <th>Date Achat</th>
+                        <th>Quantite</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -163,16 +161,14 @@
                     <tfoot>
                       <tr>
                         <th>Numero</th>
-                        <th>Nom</th>
-                        <th>Prenom</th>
-                        <th>Societe</th>
-                        <th>Adresse</th>
-                        <th>CP</th>
-                        <th>Ville</th>
-                        <th>Email</th>
-                        <th>Fixe</th>
-                        <th>Portable</th>
-                        <th>Notes</th>
+                        <th>Client(Nom)</th>
+                        <th>Client(Prenom)</th>
+                        <th>Client(Societe)</th>
+                        <th>Produit(Marque)</th>
+                        <th>Produit(Nom)</th>
+                        <th>Produit(Ref)</th>
+                        <th>Date Achat</th>
+                        <th>Quantite</th>
                       </tr>
                     </tfoot>
                   </table>
