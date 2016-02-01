@@ -137,7 +137,6 @@
                         <th>Reference</th>
                         <th>Nom</th>
                         <th>Prix</th>
-                        <th>Marque</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -151,7 +150,6 @@
                         <th>Reference</th>
                         <th>Nom</th>
                         <th>Prix</th>
-                        <th>Marque</th>
                       </tr>
                     </tfoot>
                   </table>

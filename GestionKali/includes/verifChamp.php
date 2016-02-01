@@ -79,12 +79,6 @@
         else
             $arrayVerif['prix'] = -1;
         
-        if(isset($arrayPost['marque']))
-            $arrayVerif['marque'] = filter_var($arrayPost['marque'], FILTER_SANITIZE_NUMBER_INT);
-        else
-            $arrayVerif['marque'] = -1;
-        
-        
         return $arrayVerif;
     }
     
@@ -121,7 +115,7 @@
             $arrayVerif['lieu'] = "NA";
         
         if(isset($arrayPost['client']))
-            $arrayVerif['client'] = filter_var($arrayPost['client'], FILTER_SANITIZE_NUMBER_INT);
+            $arrayVerif['client'] = filter_var($arrayPost['client'], FILTER_SANITIZE_STRING);
         else
             $arrayVerif['client'] = "NA";
         

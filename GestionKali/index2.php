@@ -129,7 +129,7 @@
         </section>
 
         <!-- Main content -->
-        <section class="content">
+          <section class="content">
             <div class="col-md-4">
               <!-- Ajouter un client -->
               <div class="box box-warning">
@@ -157,14 +157,39 @@
                 </div><!-- /.box-header -->
               </div><!-- /.box -->
             </div><!--/.col (right) -->
-        </section>   
-      </div><!-- /.content-wrapper -->
+          </section>
+          <section class="content">
+            <div class="col-md-4">
+              <div class="box warning"> 
+                <a href="http://kalidesign.fr">
+                  <button type="submit" class="btn-warning btn-lg btn btn-primary btn-block btn-flat">Retour sur kalidesign.fr</button>
+                </a>
+              </div>
+            </div>
+           <!-- /.box -->
+             <div class="col-md-4">
+              <div class="box warning">
+                <a href="https://www.ovh.com/manager/web/login/">
+                  <button type="submit" class="btn-warning btn-lg btn btn-primary btn-block btn-flat">Interface OVH</button>
+                </a>
+              </div>
+            </div>
+            <!-- /.box -->
+            <div class="col-md-4">
+              <div class="box">
+                <a href="https://ssl0.ovh.net/fr/">
+                  <button type="submit" class="btn-warning btn-lg btn btn-primary btn-block btn-flat">WebMail OVH</button>
+                </a>
+              </div><!-- /.box -->
+            </div><!--/.col (right) -->
+          </section>   
+        </div><!-- /.content-wrapper -->
 
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Gestion kali</b> Version 1.0.0
+          <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2016 <a href="http://www.atelierdescontenus.net/">L'atelier des contenus</a>.</strong> Tous droits reserves.
+        <strong>Copyright &copy; 2016 <a href="http://kalidesign.fr">KaliDesign</a>.</strong> All rights reserved.<a href="http://almsaeedstudio.com">Almsaeed Studio</a>
       </footer>
     </div><!-- ./wrapper -->
 
