@@ -167,7 +167,32 @@
                 </div><!-- /.box-header -->
               </div><!-- /.box -->
             </div><!--/.col (right) -->
-        </section>   
+          </section>
+          <section class="content">
+            <div class="col-md-4">
+              <div class="box warning"> 
+                <a href="http://kalidesign.fr">
+                  <button type="submit" class="btn-warning btn-lg btn btn-primary btn-block btn-flat">Retour sur kalidesign.fr</button>
+                </a>
+              </div>
+            </div>
+           <!-- /.box -->
+             <div class="col-md-4">
+              <div class="box warning">
+                <a href="https://www.ovh.com/manager/web/login/">
+                  <button type="submit" class="btn-warning btn-lg btn btn-primary btn-block btn-flat">Interface OVH</button>
+                </a>
+              </div>
+            </div>
+            <!-- /.box -->
+            <div class="col-md-4">
+              <div class="box">
+                <a href="https://ssl0.ovh.net/fr/">
+                  <button type="submit" class="btn-warning btn-lg btn btn-primary btn-block btn-flat">WebMail OVH</button>
+                </a>
+              </div><!-- /.box -->
+            </div><!--/.col (right) -->
+          </section> 
       </div><!-- /.content-wrapper -->
 
       <footer class="main-footer">
